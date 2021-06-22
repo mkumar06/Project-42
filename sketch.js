@@ -25,5 +25,12 @@ function draw() {
   line(0, 0, 100, 0)
   pop();
 
+  translate(200, 200)
+
+  sc = second()
+  mn = minute()
+  hr = hour()
+
+
   drawSprites();
 }
