@@ -17,6 +17,12 @@ function draw() {
   mnAngle = map(mn, 0, 60, 0, 360)
   scAngle = map(sc, 0, 60, 0, 360)
 
+  translate(200, 200)
+
+  sc = second()
+  mn = minute()
+  hr = hour()
+
   //drawing seconds hand
   push();
   rotate(scAngle); //rotate the hand based on angle calculated
@@ -25,12 +31,21 @@ function draw() {
   line(0, 0, 100, 0)
   pop();
 
-  translate(200, 200)
+  //drawing minutes hand
+  push();
+  rotate(mnAngle); //rotate the hand based on angle calculated
+  stroke(255, 0, 0)
+  strokeWeight(7);
+  line(0, 0, 100, 0)
+  pop();
 
-  sc = second()
-  mn = minute()
-  hr = hour()
-
+  //drawing hour hand
+  push();
+  rotate(hrAngle); //rotate the hand based on angle calculated
+  stroke(255, 0, 0)
+  strokeWeight(7);
+  line(0, 0, 100, 0)
+  pop();
 
   drawSprites();
 }
